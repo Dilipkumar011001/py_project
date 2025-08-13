@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: calc-web
+spec:
+  selector:
+    app: calc-web
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+ 
